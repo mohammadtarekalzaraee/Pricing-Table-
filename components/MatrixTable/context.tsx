@@ -81,29 +81,6 @@ const emptyMatrix = {
   }
 }
 
-const originState = {
-  "36months": {
-      "lite": 0,
-      "standard": 0,
-      "unlimited": 0,
-  },
-  "24months": {
-      "lite": 0,
-      "standard": 0,
-      "unlimited": 0
-  },
-  "12months": {
-      "lite": 0,
-      "standard": 0,
-      "unlimited": 0
-  },
-  "mtm": {
-      "lite": 0,
-      "standard": 0,
-      "unlimited": 0
-  }
-}
-
 const defaultState: MatrixTableState = {
   matrix: emptyMatrix,
   originalMatrix: emptyMatrix,
@@ -125,8 +102,8 @@ const reducer = (state: MatrixTableState, action: MatrixAction): MatrixTableStat
       }
     case 'ClearTable':
       return {
-        matrix: {...originState},
-        originalMatrix: {...originState},
+        matrix: {...emptyMatrix},
+        originalMatrix: {...emptyMatrix},
       }
     default:
       return state
